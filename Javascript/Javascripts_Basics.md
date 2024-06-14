@@ -267,3 +267,31 @@ console.log(obj.prop) //43;
 **Speaking Script**: *both the techniques for controlling the rate at which a function is executed*
 - `debounce` *delays the function execuation until a specified time has passed since the last call, which is useful for events like window resizing.*
 - `throttle` *ensures the function is executed at most once per speicrf interval, making it ideial for rate-limiting events like scrolling. These techniques optimizing performance by reducing the frequency of function calls.*
+
+# `16` Modules in JS
+**These are reusable pieces of code encapsulated in their own scope, exported and imported into other scripts.**
+```
+//module.js
+export const myFunction(){
+    console.log('THis is a module function');
+};
+
+//main.js
+import { myFunction} from './module.js'
+myFunction(); // This is a module function.
+```
+# `17` Event Loop
+**Its a mechanism that handles asynchronous ops by proccessing the `event queue` and executing `callback` function when the `call stack` is empty.**
+```
+console.log('Start')
+
+setTimeout(()=> {
+    console.log('Timeout');
+},0);
+
+Promise.resolve().then(()=> {
+    console.log('Promise')'
+});
+console.log('End')
+```
+**Speaking Script**: *Its a core concpet for understanding the js async behavior. Its `process` events and executes `callback functions` from the `event queue` when the call stack is empty. For example: if you set a timeout with a delay of `zero`, it will be executed after the current call stack is cleared. Similarly, `microtasks` like promises have higher proiorty over `macrotasks` like setTimeout*
