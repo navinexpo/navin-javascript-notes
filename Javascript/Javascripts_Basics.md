@@ -295,3 +295,32 @@ Promise.resolve().then(()=> {
 console.log('End')
 ```
 **Speaking Script**: *Its a core concpet for understanding the js async behavior. Its `process` events and executes `callback functions` from the `event queue` when the call stack is empty. For example: if you set a timeout with a delay of `zero`, it will be executed after the current call stack is cleared. Similarly, `microtasks` like promises have higher proiorty over `macrotasks` like setTimeout*
+
+# `19` Spread Operator
+**The spread operator (`...`) allows an iterable to be expanded in places where zero or more argument or elements are expected.**
+```
+let arr1 = [1,2,3]
+let arr2 = [...arr1, 4, 5]; // [1,2,3,4,5]
+
+let obj1 = {a:1, b:2};
+let obj2 = {...obj1, c:3}; // {a:1, b:2, c:3}
+```
+**Speaking Script**: *The spread operator is a versalite tool expands iterables such as arrays or objects into individual elements. It simplies ops like array concatenation and object merging. for eg: you can easily create a new array or object by spreading the elements of an existing one, resuting in cleaner and more readable code.*
+
+# `20` Error Handling in JS
+**Errors in JS can be handled using `try..catch` blocks, allowing you to gracefully manage exceptions and continue execution.**
+```
+try{
+    let res = riskyOps();
+    console.log(res)
+} catch(error){
+    console.log(error)
+} finally{
+    console.log('Cleanup code can go here);
+}
+function riskyOps(){
+    throw new Error('This is a deliberate error);
+}
+```
+
+**Speaking Script**: *Its `essential` for building robust application. The `try-catch` construct allows you to catch exceptions and handle them gracefully wihtout crashing your application. You can also use the `finally` block to execute code that should run regardless of whether an error occured, such as cleanup ops. This approach ensures that your application can handle unexpected situtions an continue to function smoothly.*
