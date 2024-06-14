@@ -26,12 +26,12 @@ useEffect(()=> {
     <!-- side effect logic here -->
 },[dependencies])
 ```
-**for Instance (Analogy to a smart home system):** *Imagine our component is smart home system and the `useEffect` is our smart assistance. 
--`a`. Initial Setup (componentDidMount): 
+**for Instance (Analogy to a smart home system):** *Imagine our component is smart home system and the `useEffect` is our smart assistance.*
+- `a`. Initial Setup (componentDidMount): 
 *when you first setup your home, your smart asistant configures all the devices and connnections (setting up lights, carparts, bells etc.).*
--`b`. Routine adjustments (componentDidUpdate): 
+- `b`. Routine adjustments (componentDidUpdate): 
 *Your smart asistant monitors changes, such as temperature adjustments or new devices being added, and takes appropriate actions.*
-```
+``
 useEffect(()=> {
     console.log("Adustiing setting based on changes");
     //logic that depends on changes
