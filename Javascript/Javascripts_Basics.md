@@ -56,5 +56,5 @@ const counter = createCounter();
 console.log(counter()); //1
 console.log(couter()); //2
 ```
-**Speaking Script**: * Powerful feature in JS, allowing functions to remember the env in which they were created. This enables functions to retain access to variables from their lexical scope even after that scope has exited. `InShort` a counter function can maintain its state between calls due to closures, as shown in example.*
+**Speaking Script**: *Powerful feature in JS, allowing functions to remember the env in which they were created. This enables functions to retain access to variables from their lexical scope even after that scope has exited. `InShort` a counter function can maintain its state between calls due to closures, as shown in example.*
 
