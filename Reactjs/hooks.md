@@ -94,3 +94,19 @@ const memoziedCallback = useCallback(()=> {
 ```
 const memoizedValue = useMemo(()=> computeExpensiveValue(a,b), [a,b])
 ```
+# useRef
+- `Purpose`: Creates a mutable object which persist for the lifetime of the component.
+- `Explanation`: It is used to access the DOM elements directly or store a mutable value that doesn't cause a re-render when updated. 
+```
+const inputRef = useRef(null);
+```
+# useDebugValue
+- `Purpose`: Displays a label for custom hooks in react DevTools.
+- `Explanation`: its using for debugging the react component. 
+```
+useDebugValue(isOnline ? 'online' : 'offline');
+```
+# useLayoutEffect
+- `Purpose`: Runs side effect after all DOM Manipulation but before the browser paints.
+- `Explanation`: Its same as useEffect but it fires syncronously after all DOM mutations. Its used for reading layout and syncronously re-rendering.
+
