@@ -134,3 +134,81 @@ document.getElementById("parent").addEventListener("click", (event)=> {
 
 # Null vs Undefined
 **`undefined`: means a variable has been declared but not assigned a value. `null` is an assignment value that represents no value.
+```
+let a;
+console.log(a); // undefined
+
+let b = null;
+console.log(b); // null
+```
+**Speaking Script**: *`undefined` and `null` both represnt absence of value, but they are used in different contexts.*
+- `undefined` indidcates that a variable has been declared but not assigned a value, while `null` is explicityle assinged to indiciate a delebrate  absence of value. 
+
+# Higher Order Function
+** Its a function that takes an function as a argument and retunrs a function as a result.
+```
+function HOC(5){
+    return callback(5)
+}
+function multiplyTwo(num){
+    return num*2;
+}
+console.log(HOC(multiplyByTwo)) //10
+```
+**Speaking Script**: *HOC are functions that either take other function as arguments or return fuctions as thier results. They are key feature of functional programming, enabling powerful abstractions and code resue. **for example** : HOC can accpet a callback function to customise its behavior, such as transforming as value or performing specific asctions on data.*
+
+- `11`. **`map()` `filter()` and `reduce()`**
+- `map()` creates a new array by transforming each element.
+- `filter()` createa a new array with elements that pass a test.
+- `reduce()` it reduce a array to a single value by appling a function.
+
+```
+let numbers = [1,2,3,4,5];
+
+let doubled = numbers.map(n=> n*2); // [2,4,6,8,10]
+let evens = numbers.filter(n=> n % 2 === 0); // [2,4]
+let sum = numbers.reduce((acc, curr)=> acc + curr, 0 ); //15
+```
+**Speaking Script**: *these all three methods are powerful array methods for proccessing the data.*
+- `map` applies a function to each element, producing a new array of transformed values.
+- `filter` selects elements that meet a specified condition, creating a new array of filtered results.
+- `reduce` accumulates all array elemetns into a single value, such as a sum or product, using a reducer function. 
+
+# Prototype Chain
+- `12` **Its a mechanism by which objects inhiret properties and methods from other objects.**
+```
+function Person(name){
+    this.name = name;
+}
+Perons.prototype.greet = function(){
+    console.log(`Hello, my name is ${this.name}`);
+};
+let navin = new Person('Navin');
+navin.greet(); //Hello, my name is Navin.
+```
+**Speaking Script**: *Allows objects to inherit properties and methods from other objects. When a property or method is accessed, javascript first checks the object itself. if its `not found`, it searches the `prototype` chain, enabling inheritance. This mechanism underpins the object-oriented nature of js. allowing for shared behaviours and code resues.*
+
+# Arrow Function
+- `13` **Its syntactically shorter and lexically bind the `this` value. unlike regular functions which can be dynamically bind `this`**
+```
+let add = (a,b) => a+b;
+    console.log(add(2,3)); //5
+
+let obj = {
+    value= 10;
+    regularFunction: function(){
+        setTimeout(function(){
+            console.log(this.value) //undefined, as `this` refer to the global object.
+        }, 1000);
+    },
+    arrowFunction: function(){
+        setTimeout(()=> {
+            console.log(this.value); //10, as arrow function lexically bind `this`
+        }, 1000);
+    }
+};
+obj.regularFunction();
+obj.arrowFunction();
+```
+**Speaking Script**: *Arrow functions provide a more consise syntax for writing functions and automatically bind the `this` value from thier surrounding lexical context. This resloves many issues related to `this` in regular function., espically in callback functions.*
+- `for instacne`: when using `setTimeout` inside a method, a regular function would lose the reference to the object, whereas an arrow fuction maintains it.
