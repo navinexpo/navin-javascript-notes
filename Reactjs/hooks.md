@@ -55,5 +55,42 @@ By controlling the dependency array, you can finely tune when the effect should 
 Aviod unnecessary re-renders by listing only relevant dependencies.
 **Async Operations**
 For data fetching, use async functions within the effect to handle promises efficiently. 
+```
+useEffect(()=> {
+    let isSubsribed = true; *//To prevent state update after unmount*
 
+async function fetchData(){
+    const res = await fetch("https://api.example.com/data")
+    if(isSubscribed){
+        // handle the result
+    }
+}
+fetchData()
 
+return () => {
+    isSubscribed = false; *//cleanup to prevent memeory leaks
+};
+}, [dependency]);
+```
+
+# useReducer
+- `Purpose`: Manages state with a reducer in a functional component.
+- `Explanation`: `useReducer` its an alternate of useState. involves multiple sub-values or when the next state depends on the previous one. Its an alternative to `useState`.
+```
+const [state, dispatch] = useReducer(reducer, initialState).
+```
+
+# useCallback
+- `Purpose`: Memoize function. 
+- `Explanation`: it returns a memoized version of a callback function that only changes if one of the dependencies has changed. Its useful for optimizing child component re-renders.
+```
+const memoziedCallback = useCallback(()=> {
+    doSomething...(a,b)
+},[a,b]);
+```
+# useMemo
+- `Purpose`: Memozied value.
+- `Explanation`: It returns a memoized value that only recalculates if one of the dependencies changes, its use to optmize the performance by avioding expensive calculations on every render.
+```
+const memoizedValue = useMemo(()=> computeExpensiveValue(a,b), [a,b])
+```
