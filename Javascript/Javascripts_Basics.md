@@ -212,3 +212,16 @@ obj.arrowFunction();
 ```
 **Speaking Script**: *Arrow functions provide a more consise syntax for writing functions and automatically bind the `this` value from thier surrounding lexical context. This resloves many issues related to `this` in regular function., espically in callback functions.*
 - `for instacne`: when using `setTimeout` inside a method, a regular function would lose the reference to the object, whereas an arrow fuction maintains it.
+
+# `14` Object.freeze()
+**Makes an object immutable. preventing new properties from being added and exsisting properties from being changed or removed.**
+```
+let obj = {
+    prop: 43;
+}
+Object.freeze(obj);
+obj.prop = 56; //no effect, as the object is frozen.
+console.log(obj.prop) //43;
+```
+**Speaking Script**: *Object.freeze() is a method that prevent any modifications to an object. Once an object is forzen, its properties cannot be added. removed or alterred. This is useful for creating immuntable objects. which can help ensure data integrity and avoid unintended side effects in code.*
+
