@@ -225,3 +225,45 @@ console.log(obj.prop) //43;
 ```
 **Speaking Script**: *Object.freeze() is a method that prevent any modifications to an object. Once an object is forzen, its properties cannot be added. removed or alterred. This is useful for creating immuntable objects. which can help ensure data integrity and avoid unintended side effects in code.*
 
+# `15` Debounce and Throttle
+ - **`debounce` limits that `rate` at which a function is executed by `delaying the execution` until a certain time as passed since the `last call`**
+ - *`throttle` limits the rate by ensuring a function is executed at most once in a `specified time period`**
+ ```
+ function debounce(fun, delay){
+    return function(...args){
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(()=> fun.appy(this, args), delay);
+    };
+ }
+
+ function throttle(fun, limt){
+    let lastFun;
+    let lastRan;
+    return function(..args){
+        if(!lastRan){
+            fun.appy(this, args);
+            lastRan = Data.now();
+        } else {
+            clearTimeout(lastFun);
+            lastFun = setTimeout(function(){
+                if((Date.now() - lastRan) >= limit){
+                    fun.apply(this, args);
+                    lastRan = Date.now();
+                }
+            }, limit - (Data.now() - lastRan))
+        }
+    };
+ }
+
+ *usages*
+ window.addEventListner('resize', debounce(()=> {
+    console.log('Resize event debouned');
+ }, 500));
+
+ window.addEventListner('scroll', throttle(()=> {
+    console.log('Scroll event throttled!');
+ }, 200))
+ ```
+**Speaking Script**: *both the techniques for controlling the rate at which a function is executed*
+- `debounce` *delays the function execuation until a specified time has passed since the last call, which is useful for events like window resizing.*
+- `throttle` *ensures the function is executed at most once per speicrf interval, making it ideial for rate-limiting events like scrolling. These techniques optimizing performance by reducing the frequency of function calls.*
