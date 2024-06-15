@@ -1,55 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react"
+import "../App.css"
+import SearchBar from "./SearchBar"
+import SearchResultsList from "./SearchResultsList"
 
 const SearchFunctionality = () => {
-  const [query, setQuery] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
+  const [ results, setResults] = useState([])
 
-  //simulate fetching suggestions from an API
-  const fetchSuggestions = (query) => {
-    const allSuggestion = [
-      "apple",
-      "banana",
-      "orange",
-      "grape",
-      "strawberry",
-      "blueberry",
-      "blackberry",
-      "kiwi",
-      "mango",
-      "pineapple",
-    ];
+  return (
+    <div className="App">
+      <div className="search-bar-container">
+        <SearchBar setResults={setResults}/>
+        <SearchResultsList />
+      </div>
+    </div>
+  )
+}
 
-    // filter suggestions based on query
-    return allSuggestion.filter((item) =>
-      item.toLowerCase().includes(query.toLowerCase())
-    );
-  };
-
-  useEffect(()=> {
-    if(query.length> 0) {
-        const res = fetchSuggestions(query);
-        setSuggestions(res);
-    } else {
-        setSuggestions([]);
-    }
-  },[query]);
-
-  return <div>
-    <input type="text"
-    placeholder="Search.."
-    value={query}
-    onChange={(e)=> setQuery(e.target.value)}
-    />
-    <ul>
-        {
-            suggestions && suggestions.map((suggestion, index)=> {
-                <li key={index}>
-                    {suggestion}
-                </li>
-            })
-        }
-    </ul>
-  </div>;
-};
-
-export default SearchFunctionality;
+export default SearchFunctionality
