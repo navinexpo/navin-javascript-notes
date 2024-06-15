@@ -1,16 +1,16 @@
 ### Interview QnA 
 
 # Beginner level
-- **What is React**
-- **Features of React**
-- **How to start a new project in react**
-- **What are the core building blocks of react**
-- **What is JSX, and how is it transpiled into JS**
-- **Why browser cant read jsx**
-- **How do you manage state update in React**
-- **What is redux**
-- **Explain staterties for testing React with differnt testing frameworks**
-- **Explain the virtual DOM and its impact on performance**
+- **What is React.**
+- **Features of React.**
+- **How to start a new project in react.**
+- **What are the core building blocks of react.**
+- **What is JSX, and how is it transpiled into JS.**
+- **Why browser cant read jsx.**
+- **How do you manage state update in React.**
+- **What is redux.**
+- **Explain staterties for testing React with differnt testing frameworks.**
+- **Explain the virtual DOM and its impact on performance.**
 - **What are props and state, and how do they differ**
 - **Describe error boundaries and thier purpose**
 - **How to update the state of a component in React**
@@ -26,7 +26,7 @@
 - **Descripbe your apporach to integrating a React application with a legacy system.**
 - **Describe advance state managemtn with Redux thunk or redux saga**
 - **Discuss the difference and use cases for contextAPI and redux for state management**
-# Proble solving level
+# Problem solving level
 - **Discuss different ways to implement a to-do list application in react.**
 - **Discuss common challenges you've faced while working with react.**
 - **Explain how you would handle user authentication and authorization.**

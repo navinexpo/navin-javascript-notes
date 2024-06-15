@@ -324,3 +324,30 @@ function riskyOps(){
 ```
 
 **Speaking Script**: *Its `essential` for building robust application. The `try-catch` construct allows you to catch exceptions and handle them gracefully wihtout crashing your application. You can also use the `finally` block to execute code that should run regardless of whether an error occured, such as cleanup ops. This approach ensures that your application can handle unexpected situtions an continue to function smoothly.*
+
+# `21` Events and Events Object in JS
+ - **Events are actions that happen in the web pages like clicking the button and submit the form.**
+ - **The listner listens out for the event happening and the handler is the code that is run in response to it happening.**
+ ```
+ element.addEventListner(event, function, useCapture)
+ ```
+ - `1` first paramenter is the type of the evnt like `click` or `mousedown`. 
+ - `2` Second parameter is the function we want to call when the even occurs. 
+ - `3` Third parameter is optional, it s boolean value specifing whether to sue event bubbling or event capaturing.
+
+# `22` Session Storage vs Local Storage
+**`session storage` is used to store data only for a session, meaning that it is stored until the browser is closed.**
+*The data in session storage never transfered to the server and can only be read on client side.*
+```
+let key = 'Entry1';
+localStorage.setItem(key, 'value');
+
+//reading enteries
+let myItem = localStroage.getItem(key);
+
+//deleting enteries
+localStorage.removeItem(key)
+
+//clear enteries
+localStroage.clear();
+```
