@@ -351,3 +351,25 @@ localStorage.removeItem(key)
 //clear enteries
 localStroage.clear();
 ```
+# `23` Yield
+**The yield keyword pauses the generator function execution, and the value of the expression following the yield keyword is returned to the generartor's caller.**
+- It acts as a generator-based version of the return keyword. 
+```
+function* generator(){
+    yield 1; // we pause the execuation here 
+    console.log('start') // when we resume we are here.
+}
+```
+
+# `24` next() method: 
+**A generator gives a next() method which is used to resume the exection.**
+- It return a `object` with two properties 
+`value`
+`done`
+
+```
+{
+    value: [next value];
+    done: [ true if we reach end, else false]
+}
+```
