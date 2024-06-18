@@ -373,3 +373,16 @@ function* generator(){
     done: [ true if we reach end, else false]
 }
 ```
+
+## Toggle Content Example
+
+<details>
+  <summary>Click to expand</summary>
+  <p>This is the content that can be toggled. You can include any Markdown or HTML content here.</p>
+  <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+</details>
+
