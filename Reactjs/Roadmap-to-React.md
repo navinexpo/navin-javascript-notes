@@ -23,3 +23,13 @@
 - React Asynchronous Data
 - React Conditional Rendering
 - React Advance
+
+# For Practice frontend Tech
+- http://frontendmentor.io
+- http://codewell.cc
+- http://frontendpractice.com
+- http://devchallenges.io
+- http://codewars.com
+- http://codepen.io/challenges
+- http://javascript30.com
+- http://cssbattle.com
