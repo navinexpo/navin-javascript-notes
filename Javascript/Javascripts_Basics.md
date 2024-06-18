@@ -386,3 +386,17 @@ function* generator(){
   </ul>
 </details>
 
+## Code Snippet with Custom CSS
+
+<style>
+  .red-text { color: red; }
+  .blue-text { color: blue; }
+</style>
+
+Here is a code snippet with colored text:
+
+```html
+<pre><code>
+<span class="red-text">def hello_world():</span>
+<span class="blue-text">    print("Hello, world!")</span>
+</code></pre>
