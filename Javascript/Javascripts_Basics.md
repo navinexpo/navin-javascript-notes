@@ -351,3 +351,53 @@ localStorage.removeItem(key)
 //clear enteries
 localStroage.clear();
 ```
+# `23` Yield
+**The yield keyword pauses the generator function execution, and the value of the expression following the yield keyword is returned to the generartor's caller.**
+- It acts as a generator-based version of the return keyword. 
+```
+function* generator(){
+    yield 1; // we pause the execuation here 
+    console.log('start') // when we resume we are here.
+}
+```
+
+# `24` next() method: 
+**A generator gives a next() method which is used to resume the exection.**
+- It return a `object` with two properties 
+`value`
+`done`
+
+```
+{
+    value: [next value];
+    done: [ true if we reach end, else false]
+}
+```
+
+## Toggle Content Example
+
+<details>
+  <summary>Click to expand</summary>
+  <p>This is the content that can be toggled. You can include any Markdown or HTML content here.</p>
+  <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+</details>
+
+## Code Snippet with Custom CSS
+
+<style>
+  .red-text { color: red; }
+  .blue-text { color: blue; }
+</style>
+
+Here is a code snippet with colored text:
+
+```html
+<pre><code>
+<span class="red-text">def hello_world():</span>
+<span class="blue-text">    print("Hello, world!")</span>
+</code></pre>
+```
