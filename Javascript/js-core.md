@@ -121,3 +121,79 @@ console.log(f.unShift('d')); //2
 let y = ["a", "b", "c", "d", 'e'];
 console.log(y.splice(1,3, 'f'))
 ```
+# Methods and description: 
+- `hasOwnProperty():
+*It will return a boolen indicating whether an object contains the specified property as a direct property of the object and not inherited through the prototype chain.*
+
+- `isPrototypeof()`:
+*Return a boolean indicating whether the specified object is in the prototype chain of the object.*
+
+- `propertyIsEnumerable()`:
+*Return a boolean that indicates whether the specified property is enumerable (Countable).*
+
+- `toLocaleString()`: 
+*Return the string in the local format.*
+
+- `toString()`:
+*Return the string.*
+
+- `valueOf()`:
+*Return the primitive value of specified object.*
+
+# How to create a callback: 
+- In JS, a way to create a callback function is to pass it as a `parameter` to another `function`, and then to call it back right after somethign has happened or some task is completed.
+
+**For Eg:**
+*We want to log a message to the console but it should be there after 5 secs.*
+```
+function myMessage(str){
+    setTimeout(()=> {
+        console.log("navin")
+    }, 5000)
+}
+```
+
+# Promises Basic, Promises.then() and Promise.catch(): 
+- A Promise in JS in similar to a promise we do in real life. When we make promise, it is a guarntee that in future, we are going to do something. 
+- A promise has two possible outcomes or it will not. 
+- Similarly, in JS when we define a promise, either it will be resloved when the time  comes, or it will get rejected. 
+- A promise has three state: 
+    `pending`: It is the initial State. 
+    `fullfilled`: It indicates that the promised operation was sucessful. 
+    `Rejected`: It indicates that the promised operation was unsuccessful. 
+
+    ```
+    let myPromise = new Promise((res, rej)=> {
+        ..code..
+    })
+    ```
+    *use-case*
+    ```
+    var promise = new Promise((resolve, reject)=> {
+        const x = "yes";
+        const y = "no";
+
+        if(x === y){
+            reslove();
+        } else {
+            reject()
+        }
+    })
+
+    promise
+        .then(()=> {
+        console.log('this message is success')
+    })'
+        .catch((error)=> {
+            console.log('The failure occured!', error)
+        })
+    
+    ```
+
+    # Limitations of the arrow functions: 
+    - Its do not have its own bindings to `this` or `super`, should not be used as method. 
+    - Its not suitable for `call, `bind` or `apply` which generally rely on establishing the scope as constructors. 
+    - Its a best choice when we are working with closures or callback. 
+    - Not good with object methods or constructor. 
+
+    
