@@ -430,13 +430,13 @@ Here is a code snippet with colored text:
 **Why do we need webpack?**
 *Our project become quite large with many files. Webpack automate this process and optimize your files for better performance.*
 
-`1` - Entry points: index.js or app.js. Think of this as front door to your house. This is where webpack starts its journey.
-`2` - Modules: 
+- `1` **Entry points**: index.js or app.js. Think of this as front door to your house. This is where webpack starts its journey.
+- `2` **Modules**: 
 *It looks at the `entry-points` and starts follow all the import statements to gather all the dependencies.*
 -Imagine walking through the house and picking up all the items(files) you need. 
-`3` - Loaders: 
+- `3` **Loaders**: 
 *Loaders are like translators*: They help webpack understand and prcess different types of files(like css, image, etc), they are not js. 
-`4` - Plugins: 
+- `4` **Plugins**: 
 *These are tools that perform specifc tasks during the building process. They can optimize your files, clean build directory, and much more.*
-`5`- Output: 
+- `5` **Output**: 
 *Once webpack has gathered all the files and processed them. it bundles them into one or more output files.*
