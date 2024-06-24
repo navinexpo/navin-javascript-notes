@@ -401,7 +401,7 @@ Here is a code snippet with colored text:
 <span class="blue-text">    print("Hello, world!")</span>
 </code></pre>
 ```
-# Javascript String Methods: 
+# `25` Javascript String Methods: 
 - "Hello".charAt(4) `o`;
 - "Hello".concat("", "world") `Helloworld`
 - "Hello".startsWith("H") `true`
@@ -423,3 +423,19 @@ Here is a code snippet with colored text:
 - "Hello".trim() `Hello`
 - "Hello".trimStart() `Hello`
 - "Hello".trimEnd() `Hello`
+
+# `26` What is the Webpack and its working: 
+- Its a tool that help us to bunddle the JS files and other assets into a sigle file or a few files that can be easily loaded in a web browser. 
+
+**Why do we need webpack?**
+*Our project become quite large with many files. Webpack automate this process and optimize your files for better performance.*
+
+`1`: Entry points: index.js or app.js. Think of this as front door to your house. This is where webpack starts its journey.
+`2`: Modules: It looks at the `entry-points` and starts follow all the import statements to gather all the dependencies. 
+-Imagine walking through the house and picking up all the items(files) you need. 
+`3`: Loaders: 
+*Loaders are like translators*: They help webpack understand and prcess different types of files(like css, image, etc), they are not js. 
+`4`: Plugins: 
+*These are tools that perform specifc tasks during the building process. They can optimize your files, clean build directory, and much more.*
+`5`: Output: 
+*Once webpack has gathered all the files and processed them. it bundles them into one or more output files.*
