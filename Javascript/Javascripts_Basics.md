@@ -402,33 +402,33 @@ Here is a code snippet with colored text:
 </code></pre>
 ```
 # `25` Javascript String Methods: 
-- "Hello".charAt(4) `o`;
-- "Hello".concat("", "world") `Helloworld`
-- "Hello".startsWith("H") `true`
-- "Hello".endsWith("o") `true`
-- "Hello".includes("x") `false`
-- "Hello".lastIndexOf("l") `3`
-- "Hello".indexOf("l") `2`
-- "Hello".match(/[A-Z]/g) `["H"]
-- "Hello".padStart(6, "?") `?Hello`
-- "Hello".padEnd(6, "?") `Hello?`
-- "Hello".repeat(3) `HelloHelloHello`
-- "Hello".replace("llo", "y") `Hey`
-- "Hello".search("e") `1`
-- "Hello".slice(1,3) `el`
-- "Hello".split(") `['H','e','l','l','o']`
-- "Hello".substring(2,4) `ll`
-- "Hello".toLowerCase() `hello`
-- "Hello".toUpperCase() `HELLO`
-- "Hello".trim() `Hello`
-- "Hello".trimStart() `Hello`
-- "Hello".trimEnd() `Hello`
+- "Hello".charAt(4) --------------------> `o`;
+- "Hello".concat("", "world") ---------->`Helloworld`
+- "Hello".startsWith("H") -------------->`true`
+- "Hello".endsWith("o")-----------------> `true`
+- "Hello".includes("x") ---------------->`false`
+- "Hello".lastIndexOf("l") -------------> `3`
+- "Hello".indexOf("l") ----------------->`2`
+- "Hello".match(/[A-Z]/g) --------------> `["H"]`
+- "Hello".padStart(6, "?") ------------->`?Hello`
+- "Hello".padEnd(6, "?") ---------------> `Hello?`
+- "Hello".repeat(3) --------------------> `HelloHelloHello`
+- "Hello".replace("llo", "y") ---------->`Hey`
+- "Hello".search("e")-------------------> `1`
+- "Hello".slice(1,3)--------------------> `el`
+- "Hello".split(") --------------------->`['H','e','l','l','o']`
+- "Hello".substring(2,4)----------------> `ll`
+- "Hello".toLowerCase() ---------------->`hello`
+- "Hello".toUpperCase() ---------------->`HELLO`
+- "Hello".trim() ----------------------->`Hello`
+- "Hello".trimStart() ------------------>`Hello`
+- "Hello".trimEnd()---------------------> `Hello`
 
 # `26` What is the Webpack and its working: 
 - Its a tool that help us to bunddle the JS files and other assets into a sigle file or a few files that can be easily loaded in a web browser. 
 
 **Why do we need webpack?**
-*Our project become quite large with many files. Webpack automate this process and optimize your files for better performance.*
+- *Our project become quite large with many files. Webpack automate this process and optimize your files for better performance.*
 
 - `1` **Entry points**: index.js or app.js. Think of this as front door to your house. This is where webpack starts its journey.
 - `2` **Modules**: 
