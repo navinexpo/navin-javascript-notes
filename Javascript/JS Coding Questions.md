@@ -12,3 +12,5 @@ function flattenArray(arr){
 ```
 # DeepClone an Object
 - Write a function to deeply cloned a nested object. 
+
+# write a function to find the maximum number of elements in the array. 

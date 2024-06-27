@@ -1,0 +1,41 @@
+// console.log("max number-1",maxNumber([1,2,3]));
+
+// // using method 
+// let array = [1,2,3]
+// console.log("max number-2",Math.max(...array))
+// console.log("min number",Math.min(...array))
+
+// // Write a JavaScript function to check if a given string is a palindrome
+// // using core js
+
+// const str = "radar"
+// function palimdrome(str){
+//     let reverseValue = ""
+//     for(let i=str.length-1; i>=0 ; i--) {
+//         reverseValue += str[i]
+//     }
+//     return str === reverseValue
+// }
+// console.log("palidrome-1",palimdrome(str));
+
+// // Write a JavaScript program to reverse a given string. 
+// const reverseString = (str) => str.split("").reverse().join(""); 
+// console.log("palidrome-2",reverseString(str));
+
+//Checking prime number using Flag variable
+function checkPrime(num){
+    let i, flag=true;
+    for(i = 2; i<=num-1; i++){
+        if(num%i==0){
+            flag = false;
+            break;
+        }
+    }
+    if(flag==true){
+        console.log(num + " is a prime")
+    } else {
+        console.log(num + " is not a prime")
+    }
+}
+checkPrime(5)
+checkPrime(4)
