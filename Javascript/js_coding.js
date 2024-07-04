@@ -1,3 +1,5 @@
+console.log("JS Coding Problems")
+
 // console.log("max number-1",maxNumber([1,2,3]));
 
 // // using method 
@@ -23,19 +25,35 @@
 // console.log("palidrome-2",reverseString(str));
 
 //Checking prime number using Flag variable
-function checkPrime(num){
-    let i, flag=true;
-    for(i = 2; i<=num-1; i++){
-        if(num%i==0){
-            flag = false;
-            break;
-        }
-    }
-    if(flag==true){
-        console.log(num + " is a prime")
-    } else {
-        console.log(num + " is not a prime")
+// function checkPrime(num){
+//     let i, flag=true;
+//     for(i = 2; i<=num-1; i++){
+//         if(num%i==0){
+//             flag = false;
+//             break;
+//         }
+//     }
+//     if(flag==true){
+//         console.log(num + " is a prime")
+//     } else {
+//         console.log(num + " is not a prime")
+//     }
+// }
+// checkPrime(5)
+// checkPrime(4)
+
+// write a function where the code is going to satisfy the hoisting concepts. 
+if(1){
+    function addCount(){
+        return 3+3
     }
 }
-checkPrime(5)
-checkPrime(4)
+console.log(addCount)
+
+/*
+    - function act as a block scope. 
+    - Inside the if block, the block does not execute, the function is not defined in the current scope. (global scope)
+    - if(0) evaluates to 'false' because 0 is a falsy value in js ( any num than 0 is truthy)
+    - the function is not defined or accessible outside of this block. 
+    - function is not defined in the current scope. 
+*/
