@@ -1,7 +1,9 @@
 import { instance } from "../server.js";
 import crypto from "crypto";
+import { Payment } from "../models/paymentModel.js";
 
 export const checkout = async (req, res) => {
+  // console.log("+++++++")
   //create order
   const options = {
     amount: Number(req.body.amount * 1000), //amount in the smallest currency unit
@@ -17,6 +19,7 @@ export const checkout = async (req, res) => {
 };
 
 export const paymentVerification = async (req, res) => {
+  console.log("Payment verification initiated");
   console.log(req.body);
 
   const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
@@ -24,22 +27,28 @@ export const paymentVerification = async (req, res) => {
 
   const body = razorpay_order_id + "|" + razorpay_payment_id;
 
-  // const crypto = require("crypto");
   const expectedSignature = crypto
     .createHmac("sha256", process.env.RAZORPAY_API_SECRET)
     .update(body.toString())
     .digest("hex");
-  console.log("sig received", razorpay_signature);
-  console.log("sig generated", expectedSignature);
+
+  console.log("Signature received from Razorpay:", razorpay_signature);
+  console.log("Generated signature:", expectedSignature);
 
   const isAuthenticated = expectedSignature === razorpay_signature;
 
   if (isAuthenticated) {
-    //database comes here
+    console.log("Authentication successful");
+    const  red = await Payment.create({
+      razorpay_order_id
+    });
+    console.log("Authneti-->", red)
     res.redirect(
-      `http://localhost:3000/paymentsuccess?reference=${razorpay_payment_id}`
+      `http://localhost:5173/paymentsuccess?reference=${razorpay_payment_id}`
     );
+    console.log("Redirecting to success page");
   } else {
+    console.log("Authentication failed");
     res.status(400).json({
       success: false,
     });
