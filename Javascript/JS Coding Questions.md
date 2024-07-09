@@ -14,3 +14,7 @@ function flattenArray(arr){
 - Write a function to deeply cloned a nested object. 
 
 # write a function to find the maximum number of elements in the array. 
+
+
+# Write a function and it accept string and now you have to count the vowels into the string. 
+- 

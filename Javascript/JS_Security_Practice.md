@@ -14,3 +14,6 @@ const userInput = document.querySelector('#user-input').value;
 document.getElementById('output').textContent = userInput; 
 // Safely add user content to your page
 ```
+
+## JS Array methods with emojis
+# Refer: [https://community.appsmith.com/content/guide/javascript-array-methods-demonstrated-emojis?ref=dailydev]
