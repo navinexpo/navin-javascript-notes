@@ -1,0 +1,20 @@
+- 1. Fetching Data from API's: Handle Async HTTP requests. 
+- 2. Reading Files: Manage file system operations in NodeJS
+- 3. Writing to database: Perform asyn db queries. 
+- 4. User Authentication: Validate user creds asynchrounously. 
+- 5. Image Loading: Ensure images are fully loaded before rendering. 
+- 6. Delayed Execuation: Schedule tasks to run after a delay. 
+- 7. Chaining Async Operation: Perform sequential asyn task. 
+- 8. Parallel Aynsc Operations: Handle multiple async tasks concurrently. 
+- 9. Event Handling: Wait for multiple events to complete. 
+- 10. Animation sequencing: Control animation timelines asynchronously. 
+- 11. Websocket connections: Manage real-time data streams. 
+- 12. Timeout Ops: Execute code afer timeout. 
+- 13. Error Handling: Handle errors in asynchronous operations gracefully. 
+- 14. Form submissions: Process form data without blocking UI. 
+- 15. External script loading: Ensure scripts load in correct order. 
+- 16. Service Workers: Manage backgrounds tasks for web applications. 
+- 17. Geolocation API: Get user's location asynchronously. 
+- 18. Push Notifications: Handle push messages in web apps. 
+- 19. Session Management: Control users session asynchronously. 
+- 20. Data synchrnization: Sync local data with remote servers. 

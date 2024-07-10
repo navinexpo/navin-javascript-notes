@@ -57,3 +57,11 @@ console.log(addCount)
     - the function is not defined or accessible outside of this block. 
     - function is not defined in the current scope. 
 */
+
+function toTitleCase(str){
+    let res = '';
+    let capitalzeChar = true; // flag to indicate if the next char should be capitlize 
+
+    
+   
+}

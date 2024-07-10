@@ -18,3 +18,5 @@ function flattenArray(arr){
 
 # Write a function and it accept string and now you have to count the vowels into the string. 
 - 
+
+# write the function where the first letter should be the capital letter and rest of the words are small letters for each word in the sentence. 
