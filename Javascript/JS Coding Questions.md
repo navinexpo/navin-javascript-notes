@@ -20,3 +20,33 @@ function flattenArray(arr){
 - 
 
 # write the function where the first letter should be the capital letter and rest of the words are small letters for each word in the sentence. 
+```javascript
+function toTitleCase(str){
+    let res = '';
+    let capitalzeChar = true; // flag to indicate if the next char should be capitlize
+
+    let i;
+    for(i=0; i< str.length; i++){
+        let char = str[i];
+
+        if(char === ' '){
+            //if the current is a space, add it to the result and set the flag to capatalize the next character 
+            res = res + char;
+            capitalzeChar = true;
+        } else {
+            // if caps is true, convert the cahr in uppercase, otherwise lower case. 
+            if(capitalzeChar){
+                res = res + char.toUpperCase();
+                capitalzeChar = false; //reset the flag
+            } else {
+                res = res + char.toLowerCase();
+            }
+        }
+    }
+    return res;
+}
+const exampleString = "hello world! this is a test string.";
+const titleCasedString = toTitleCase(exampleString);
+console.log(titleCasedString);
+
+```

@@ -58,10 +58,35 @@ console.log(addCount)
     - function is not defined in the current scope. 
 */
 
+
+// *** Write a function which take string and returns the string with first letter caps and the rests are in lowercase. 
 function toTitleCase(str){
     let res = '';
-    let capitalzeChar = true; // flag to indicate if the next char should be capitlize 
+    let capitalzeChar = true; // flag to indicate if the next char should be capitlize
 
-    
-   
+    let i;
+    for(i=0; i< str.length; i++){
+        let char = str[i];
+
+        if(char === ' '){
+            //if the current is a space, add it to the result and set the flag to capatalize the next character 
+            res = res + char;
+            capitalzeChar = true;
+        } else {
+            // if caps is true, convert the cahr in uppercase, otherwise lower case. 
+            if(capitalzeChar){
+                res = res + char.toUpperCase();
+                capitalzeChar = false; 
+            } else {
+                res = res + char.toLowerCase();
+            }
+        }
+    }
+    return res;
 }
+const exampleString = "hello world! this is a test string.";
+const titleCasedString = toTitleCase(exampleString);
+console.log(titleCasedString);
+
+
+// *** Write a function 
