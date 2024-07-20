@@ -168,7 +168,8 @@ function myMessage(str){
     })
     ```
     *use-case*
-    ```
+
+    ```javascript
     var promise = new Promise((resolve, reject)=> {
         const x = "yes";
         const y = "no";
@@ -189,10 +190,9 @@ function myMessage(str){
         })
     
     ```
-
     # Limitations of the arrow functions: 
     - Its do not have its own bindings to `this` or `super`, should not be used as method. 
-    - Its not suitable for `call, `bind` or `apply` which generally rely on establishing the scope as constructors. 
+    - Its not suitable for `call`, `bind` or `apply` which generally rely on establishing the scope as constructors. 
     - Its a best choice when we are working with closures or callback. 
     - Not good with object methods or constructor. 
 

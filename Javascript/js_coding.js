@@ -1,8 +1,8 @@
-console.log("JS Coding Problems")
+console.log("JS Coding Problems");
 
 // console.log("max number-1",maxNumber([1,2,3]));
 
-// // using method 
+// // using method
 // let array = [1,2,3]
 // console.log("max number-2",Math.max(...array))
 // console.log("min number",Math.min(...array))
@@ -20,8 +20,8 @@ console.log("JS Coding Problems")
 // }
 // console.log("palidrome-1",palimdrome(str));
 
-// // Write a JavaScript program to reverse a given string. 
-// const reverseString = (str) => str.split("").reverse().join(""); 
+// // Write a JavaScript program to reverse a given string.
+// const reverseString = (str) => str.split("").reverse().join("");
 // console.log("palidrome-2",reverseString(str));
 
 //Checking prime number using Flag variable
@@ -42,13 +42,13 @@ console.log("JS Coding Problems")
 // checkPrime(5)
 // checkPrime(4)
 
-// write a function where the code is going to satisfy the hoisting concepts. 
-if(1){
-    function addCount(){
-        return 3+3
-    }
+// write a function where the code is going to satisfy the hoisting concepts.
+if (1) {
+  function addCount() {
+    return 3 + 3;
+  }
 }
-console.log(addCount)
+console.log(addCount);
 
 /*
     - function act as a block scope. 
@@ -58,35 +58,54 @@ console.log(addCount)
     - function is not defined in the current scope. 
 */
 
+// *** Write a function which take string and returns the string with first letter caps and the rests are in lowercase.
+function toTitleCase(str) {
+  let res = "";
+  let capitalzeChar = true; // flag to indicate if the next char should be capitlize
 
-// *** Write a function which take string and returns the string with first letter caps and the rests are in lowercase. 
-function toTitleCase(str){
-    let res = '';
-    let capitalzeChar = true; // flag to indicate if the next char should be capitlize
+  let i;
+  for (i = 0; i < str.length; i++) {
+    let char = str[i];
 
-    let i;
-    for(i=0; i< str.length; i++){
-        let char = str[i];
-
-        if(char === ' '){
-            //if the current is a space, add it to the result and set the flag to capatalize the next character 
-            res = res + char;
-            capitalzeChar = true;
-        } else {
-            // if caps is true, convert the cahr in uppercase, otherwise lower case. 
-            if(capitalzeChar){
-                res = res + char.toUpperCase();
-                capitalzeChar = false; 
-            } else {
-                res = res + char.toLowerCase();
-            }
-        }
+    if (char === " ") {
+      //if the current is a space, add it to the result and set the flag to capatalize the next character
+      res = res + char;
+      capitalzeChar = true;
+    } else {
+      // if caps is true, convert the cahr in uppercase, otherwise lower case.
+      if (capitalzeChar) {
+        res = res + char.toUpperCase();
+        capitalzeChar = false;
+      } else {
+        res = res + char.toLowerCase();
+      }
     }
-    return res;
+  }
+  return res;
 }
 const exampleString = "hello world! this is a test string.";
 const titleCasedString = toTitleCase(exampleString);
 console.log(titleCasedString);
 
+// *** Write a function that takes number from 1 to 100. Now you have to print fish on 3X multiple, bowl on 5X multiple and fish-bowl on 3 and 5 mulitle both:
 
-// *** Write a function 
+function printMultiples(num) {
+  let i,
+    countFishBowlMultiples = 0;
+
+  for (i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("Fish-Bowl");
+      countFishBowlMultiples++;
+    } else if (i % 3 === 0) {
+      console.log("Fish");
+    } else if (i % 5 === 0) {
+      console.log("Bowl");
+    } else {
+        console.log(i)
+    }
+  }
+}
+console.log("CountFishBowl", countFishBowlMultiples)
+
+// vs ternary operator
