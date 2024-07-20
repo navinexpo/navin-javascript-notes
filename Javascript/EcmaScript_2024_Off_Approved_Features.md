@@ -1,4 +1,4 @@
-## 20-07-2024
+# 20-07-2024
 
 1. `Promise.withResolvers()`
 
@@ -18,7 +18,7 @@ promise
 
 - note: const { promise, resolve, reject } = Promise.withResolvers() provides object with promise, resolve and reject properties.
 
-# Use Case 1: Handling async operations:
+## Use Case 1: Handling async operations:
 
 ```javascript
 //using Promise.withResovlers() for an async operation
@@ -43,7 +43,7 @@ fetchData('http://api.sxy.com/data')
     .catch(err => console.log('Error', err))
 ```
 
-# Use Case 2: Co-ordinating multiple async operations:
+## Use Case 2: Co-ordinating multiple async operations:
 
 - Sometime we need to coordinate multiple asyn ops and resolve a promise when all of them are completed.
 
