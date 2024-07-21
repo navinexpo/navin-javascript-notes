@@ -75,3 +75,18 @@ function performOperation(){
     performOperations()
         .then(msg => console.log(msg));
 ```
+## Use Case 3: Event-driven Programming: 
+```javascript
+ function waitForEvent(target, eventName){
+    const { promise, resolve, reject} = Promise.withResolvers();
+
+    function eventHandler(){
+        target.removeEventListner(eventName, eventHandler);
+    }
+        return promise;
+ }
+ // usage
+ const button = document.querySelector('button');
+ waitforEvent(button, 'click')
+    .then(event => console.log('button clickec', event));
+```

@@ -13,6 +13,7 @@
 - reponse headers
 - response caching
 - response compression (gzip, brotli, etc.)
+- `gzip`: Its used for transfering data quickly over the internet. file format will `.gz`. 
 - response cookies
 - redirect handling
 - handle image (jpeg, png, webp, svg, etc.)
@@ -23,7 +24,7 @@
 - OAuth
 - JWT
 - API Keys
-- cookies
+- cookies  
 - session
 - token
 - refresh token
@@ -35,4 +36,4 @@
 - Retry
 - Backoff
 - Timeout
-- Circuit braker
+- Circuit breaker

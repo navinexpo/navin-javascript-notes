@@ -1,0 +1,1 @@
+refer: [https://baguilar6174.medium.com/react-design-patterns-6ab55c5ebafb]
