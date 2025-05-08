@@ -10,12 +10,12 @@ links: `[title](https://js.com)`
 
 
 ## Introduction
-JS is a versatile, object-oriented programming lang used for web developement. 
+JS is a versatile, object-oriented programming lang used for web development. 
 
 ## variables
-- `var`: Function-scoped variable declartion.
+- `var`: Function-scoped variable declaration.
 - `let`: block-scoped variable declaration.
-- `const` : block-scoped variable declaration. It can't be `re-assinged` ever
+- `const` : block-scoped variable declaration. It can't be `re-assigned` ever
 **Speaking Script**: *Using `var`, `let`, `const` effectively can prevent scope-related bugs.
 
 - Code Instance: 
@@ -70,7 +70,7 @@ function hoistedFunction(){
 }
 ```
 
-**Speaking Script**: *Hoisting in JS lifts variable and function declartions to the top of their containing scope during compilation.* 
+**Speaking Script**: *Hoisting in JS lifts variable and function declarations to the top of their containing scope during compilation.* 
 - `a` This means you can use functions and variables before they're declared in the code. 
 - `b` For eg: calling a function before its definitions works coz declarations is hoisted, but using a variable before its assignment result in `undefined`.
 
@@ -90,7 +90,7 @@ promise.then(res => console.log(res)); Op: `Success`
 console.log(5 == '5') //true, due to type coercion
 console.log(5 === '5') //false, strict equality check
 ```
-**Speaking Script** *In js `==` Performs type coercion before comparing two values, which can lead to unexpected results. On the other hand, `===` check both the value and the type, ensuring a stricter and often safer comparision.*
+**Speaking Script** *In js `==` Performs type coercion before comparing two values, which can lead to unexpected results. On the other hand, `===` check both the value and the type, ensuring a stricter and often safer comparison.*
 
 # this keyword
 - **`this` refers to the object it belongs to. In method, `this` referes to the owner object.**

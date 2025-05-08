@@ -30,7 +30,7 @@ const check_if_address_is_valid(address):
         return (latitude, longitude)
 ```
 
-```python
+```javascript
 here is the better way
 const check_if_address_is_valid(address): 
     return address.is_valid:
